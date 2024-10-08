@@ -78,6 +78,6 @@ onMounted(() => {
     background-image: url('/bg-transparent.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; 
 }
 </style>
