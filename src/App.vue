@@ -6,9 +6,6 @@ import HandVue from "./components/icons/Hand.vue";
 import HomeVue from "./components/icons/Home.vue";
 import LoveVue from "./components/icons/Love.vue";
 import TimeVue from "./components/icons/Time.vue";
-CommentVue
-
-
 
 </script>
 
