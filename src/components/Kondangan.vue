@@ -28,9 +28,7 @@ const { text, copy, copied, isSupported } = useClipboard({ bca })
       <span v-else>Copied!</span>
     </button>
   </div>
-  <p v-else>
-    Your browser does not support Clipboard API
-  </p>
+
           
         </div>
         <div>
