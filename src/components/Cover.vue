@@ -18,8 +18,8 @@ onMounted(() => {
     <div class="cover min-h-screen flex flex-col justify-center items-center">
         <div class="max-w-[400px] w-full p-8 mx-auto text-center ">
           <div v-if="$route.query.name">
-            <div class="-rotate-3 font-semibold p-2 bg-white shadow-xl">
-                <p>Kepada,{{ $route.query.name }}</p>
+            <div class="-rotate-3 font-semibold p-2 bg-white shadow-xl max-w-max mb-5">
+                <p>Kepada, {{ $route.query.name }}</p>
             </div>
           </div>
             <p class="undangan text-2xl yellowtail  text-purple-800  -rotate-3">Undangan Pernikahan</p>
@@ -29,7 +29,7 @@ onMounted(() => {
                 <span class="absolute top-1/3  left-1/2  text-5xl lg:text-7xl">&</span>
                 <span class="-mt-20 "> Azis</span>
             </div>
-            <p class="text-xl font-bold waktu pb-5"> 2 november 2024</p>
+            <p class="text-xl font-bold waktu pb-5"> 2 November 2024</p>
             <router-link to="/couple" class="btn py-2 px-5 rounded-full bg-primary text-purple-50 ">Buka undangan</router-link>
         </div>
     </div>

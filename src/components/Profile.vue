@@ -16,15 +16,9 @@ onMounted(() => {
     })
 
     onMounted(() => {
-
         inView("section", ({ target }) => {
-            animate(
-                target.querySelector("h2"),
-                { opacity: 1, transform: "none" },
-                { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
-            );
+            console.log(target)
         });
-
     })
 
 })
@@ -56,17 +50,17 @@ onMounted(() => {
             </div>
         </div>
     </section>
-    <section id="waktu" class="min-h-screen flex fle-col justify-center items-center bg-secondary bg-opacity-20 px-6">
+    <section id="waktu" class="waktu min-h-screen flex fle-col justify-center items-center bg-secondary bg-opacity-20 px-6">
         <WaktuVue />
     </section>
     <section id="turut-mengundang" class="min-h-screen flex fle-col justify-center items-center px-6">
         <TurutMengundangVue />
     </section>
-    <section id="kondangan" class="min-h-screen flex fle-col justify-center items-center px-6 bg-neutral-50">
+    <section id="kondangan" class="kondangan min-h-screen flex fle-col justify-center items-center px-6 bg-neutral-50">
         <KondanganVue class="transfer" />
     </section>
     <section id="komentar"
-        class="min-h-screen flex fle-col justify-center items-center px-6 bg-secondary bg-opacity-20">
+        class="min-h-screen py-20 flex fle-col justify-center items-center px-6 bg-secondary bg-opacity-20">
         <KomentarVue />
     </section>
 </template>
