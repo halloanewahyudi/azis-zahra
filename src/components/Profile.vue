@@ -1,9 +1,10 @@
 <script setup>
 import { animate } from "motion";
 import { onMounted } from "vue";
+import KomentarVue from "./Komentar.vue";
+import KondanganVue from "./Kondangan.vue";
 import TurutMengundangVue from "./TurutMengundang.vue";
 import WaktuVue from "./Waktu.vue";
-
 
 onMounted(()=>{
     animate(".foto",{
@@ -47,6 +48,12 @@ onMounted(()=>{
     </section>
     <section id="turut-mengundang" class="min-h-screen flex fle-col justify-center items-center px-6">
         <TurutMengundangVue />
+    </section>
+    <section id="kondangan" class="min-h-screen flex fle-col justify-center items-center px-6 bg-neutral-50">
+        <KondanganVue />
+    </section>
+    <section id="komentar" class="min-h-screen flex fle-col justify-center items-center px-6 bg-secondary bg-opacity-20">
+        <KomentarVue />
     </section>
 </template>
 <style scoped>
