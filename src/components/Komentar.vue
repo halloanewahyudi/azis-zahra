@@ -9,6 +9,8 @@ const pesanCollection = collection(db, 'undangan');
 const pesan = useCollection(pesanCollection);
 
 const komen = ref({})
+const code = ref(Math.floor(Math.random()*(9999-100+1)+100))
+
 // Function to send message
 const sendMessage = async () => {
     if (komen.value.nama && komen.value.pesan) {
