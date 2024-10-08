@@ -8,7 +8,6 @@ import { ref } from "vue";
 const pesanCollection = collection(db, 'undangan');
 const pesan = useCollection(pesanCollection);
 
-
 const komen = ref({})
 // Function to send message
 const sendMessage = async () => {
