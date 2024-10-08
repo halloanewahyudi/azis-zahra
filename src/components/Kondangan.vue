@@ -3,9 +3,9 @@ import { ref } from "vue";
 import CardVue from "./icons/Card.vue";
 import PlaneVue from "./icons/Plane.vue";
 import { useClipboard } from '@vueuse/core'
-const bca = ref('351 xxxx xxxx ')
+const rek = ref('1230012025559')
 
-const { text, copy, copied, isSupported } = useClipboard({ bca })
+const { text, copy, copied, isSupported } = useClipboard({ rek })
 
 </script>
 
@@ -15,14 +15,15 @@ const { text, copy, copied, isSupported } = useClipboard({ bca })
         <div class="bg-primary text-secondary  py-2 px-4 rounded-full -rotate-3 absolute -top-3">
             <h2> Kondangan</h2>
         </div>
+        <p class="self-start"> Transfer</p>
         <div class="w-full flex gap-3 items-center">
-           <img src="/bca.png" alt="" srcset="" class="w-20">
+           <img src="/bank-mandiri.svg" alt="" srcset="" class="w-20">
            <div class="mr-auto">
-            <p> Azis Muslih</p>
-            <span class="text-lg font-semibold"> BCA {{ bca }} </span>
+            <p> MUSLI AZIS </p>
+            <span class="text-lg font-semibold">  {{ rek }} </span>
            </div>
            <div v-if="isSupported">
-    <button @click="copy(bca)" class="bg-light rounded-lg text-sm p-2 ml-auto shrink-0">
+    <button @click="copy(rek)" class="bg-light rounded-lg text-sm p-2 ml-auto shrink-0">
       <!-- by default, `copied` will be reset in 1.5s -->
       <span v-if="!copied">Copy</span>
       <span v-else>Copied!</span>
