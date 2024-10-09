@@ -14,13 +14,6 @@ onMounted(() => {
         duration: 1,
         delay: .2
     })
-
-    onMounted(() => {
-        inView("section", ({ target }) => {
-            console.log(target)
-        });
-    })
-
 })
 
 </script>

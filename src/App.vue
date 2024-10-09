@@ -7,20 +7,10 @@ import HomeVue from "./components/icons/Home.vue";
 import LoveVue from "./components/icons/Love.vue";
 import TimeVue from "./components/icons/Time.vue";
 import {useRoute} from 'vue-router'
-import { animate } from "motion";
 import { onMounted } from "vue";
 
 const route = useRoute()
 
-onMounted(()=>{
-  animate(".content",{
-    opacity:[0,1],
-    scale:[.2,1]
-  },{
-    duration:1,
-    delay:.2
-  })
-})
 </script>
 
 <template>
@@ -35,7 +25,6 @@ onMounted(()=>{
       <router-link to="/kondangan"> <GiftVue /> </router-link>
       <router-link to="/komentar"> <BookVue /> </router-link>
    </div>
-
    </div>
   </div>
 </template>

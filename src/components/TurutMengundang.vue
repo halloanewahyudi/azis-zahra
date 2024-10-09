@@ -1,5 +1,16 @@
 <script lang="ts" setup>
+import { animate } from "motion";
+import { onMounted } from "vue";
 
+onMounted(()=>{
+    animate(".content", {
+        opacity: [0, 1],
+        scale: [2, 1]
+    }, {
+        duration: 1,
+        delay: .2
+    })
+})
 </script>
 
 <template>

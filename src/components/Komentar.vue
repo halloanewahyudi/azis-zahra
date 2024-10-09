@@ -3,13 +3,24 @@ import PlaneVue from "./icons/Plane.vue";
 import { useCollection, useDatabaseList, useDatabaseObject } from 'vuefire';
 import { collection, addDoc, deleteDoc, updateDoc, doc } from 'firebase/firestore';
 import { db, auth } from './../firebase.js';
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { animate } from "motion";
 
 const pesanCollection = collection(db, 'undangan');
 const pesan = useCollection(pesanCollection);
 
 const komen = ref({})
 const code = ref(Math.floor(Math.random() * (9999 - 100 + 1) + 100))
+
+onMounted(()=>{
+    animate(".content", {
+        opacity: [0, 1],
+        scale: [2, 1]
+    }, {
+        duration: 1,
+        delay: .2
+    })
+})
 
 // Function to send message
 const sendMessage = async () => {

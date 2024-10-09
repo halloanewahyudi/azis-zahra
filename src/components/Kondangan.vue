@@ -1,12 +1,22 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import CardVue from "./icons/Card.vue";
 import PlaneVue from "./icons/Plane.vue";
 import { useClipboard } from '@vueuse/core'
+import { animate } from "motion";
 
 const rek = ref('1230012025559')
-
 const { text, copy, copied, isSupported } = useClipboard({ rek })
+
+onMounted(()=>{
+    animate(".content", {
+        opacity: [0, 1],
+        scale: [2, 1]
+    }, {
+        duration: 1,
+        delay: .2
+    })
+})
 </script>
 
 <template>

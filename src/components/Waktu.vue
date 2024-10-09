@@ -1,5 +1,18 @@
 <script lang="ts" setup>
+import { animate } from "motion";
+import { onMounted } from "vue";
 import PinVue from "./icons/Pin.vue";
+
+onMounted(()=>{
+    animate(".content", {
+        opacity: [0, 1],
+        scale: [2, 1]
+    }, {
+        duration: 1,
+        delay: .2
+    })
+})
+
 </script>
 <template>
        <section id="waktu" class="waktu min-h-screen flex fle-col justify-center items-center bg-secondary bg-opacity-20 px-6">
