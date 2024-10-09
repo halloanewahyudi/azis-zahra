@@ -7,8 +7,20 @@ import HomeVue from "./components/icons/Home.vue";
 import LoveVue from "./components/icons/Love.vue";
 import TimeVue from "./components/icons/Time.vue";
 import {useRoute} from 'vue-router'
+import { animate } from "motion";
+import { onMounted } from "vue";
 
 const route = useRoute()
+
+onMounted(()=>{
+  animate(".content",{
+    opacity:[0,1],
+    scale:[.2,1]
+  },{
+    duration:1,
+    delay:.2
+  })
+})
 </script>
 
 <template>
@@ -18,14 +30,10 @@ const route = useRoute()
     <div class="py-2 px-4 bg-primary text-secondary text-xl rounded-full flex items-center justify-center gap-4 w-full max-w-max mx-auto fixed left-0 right-0 bottom-2">
       <router-link to="/"> <HomeVue /> </router-link>
       <router-link to="/couple"> <LoveVue /> </router-link>
-      <div v-if="route.path == '/couple' " class="flex items-center gap-5">
-        <a href="#waktu"> <TimeVue /> </a>
-        <a href="#turut-mengundang"><HandVue /></a>
-        <a href="#kondangan"><GiftVue /></a>
-        <a href="#komentar"><BookVue /></a>
-        
-      </div>
-
+      <router-link to="/waktu"> <TimeVue /> </router-link>
+      <router-link to="/turut-mengundang"> <HandVue /> </router-link>
+      <router-link to="/kondangan"> <GiftVue /> </router-link>
+      <router-link to="/komentar"> <BookVue /> </router-link>
    </div>
 
    </div>

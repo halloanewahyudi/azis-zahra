@@ -1,15 +1,12 @@
 <script lang="ts" setup>
 import PinVue from "./icons/Pin.vue";
-
-
 </script>
-
 <template>
+       <section id="waktu" class="waktu min-h-screen flex fle-col justify-center items-center bg-secondary bg-opacity-20 px-6">
+    
     <div class="flex flex-col gap-5">
-
-
         <div
-            class="max-w-[400px] relative mx-auto p-6 pt-12 bg-white text-center rounded-xl border-2 border-dashed shadow-xl flex flex-col justify-center items-center">
+            class="content max-w-[400px] relative mx-auto p-6 pt-12 bg-white text-center rounded-xl border-2 border-dashed shadow-xl flex flex-col justify-center items-center">
             <div class="bg-light text-primary py-2 px-4 rounded-full -rotate-3 absolute -top-3">
                 <h2>Waktu dan tempat</h2>
             </div>
@@ -36,4 +33,5 @@ import PinVue from "./icons/Pin.vue";
         </div>
 
     </div>
+    </section>
 </template>

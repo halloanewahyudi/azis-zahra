@@ -38,7 +38,7 @@ onMounted(() => {
                 <div>
                     <h4 class="yellowtail"> Aziz</h4>
                     <p>Muslih Azis</p>
-                    <p class="">Putra Pertama dari Pasangan</p>
+                    <p class="">Putra ke3 dari Pasangan</p>
                     <p>Haris Maulani & Nurhidayanti</p>
                 </div>
                 <div>
@@ -50,28 +50,11 @@ onMounted(() => {
             </div>
         </div>
     </section>
-    <section id="waktu" class="waktu min-h-screen flex fle-col justify-center items-center bg-secondary bg-opacity-20 px-6">
-        <WaktuVue />
-    </section>
-    <section id="turut-mengundang" class="min-h-screen flex fle-col justify-center items-center px-6">
-        <TurutMengundangVue />
-    </section>
-    <section id="kondangan" class="kondangan min-h-screen flex fle-col justify-center items-center px-6 bg-neutral-50">
-        <KondanganVue class="transfer" />
-    </section>
-    <section id="komentar"
-        class="min-h-screen py-20 flex fle-col justify-center items-center px-6 bg-secondary bg-opacity-20">
-        <KomentarVue />
-    </section>
+   
 </template>
 <style scoped>
 .couple h4 {
     @apply font-semibold text-3xl text-primary;
 }
-#couple, #waktu,#turut-mengundang,#kondangan,#komentar{
-    background-image: url('/bg-transparent.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; 
-}
+
 </style>

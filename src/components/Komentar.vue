@@ -9,7 +9,7 @@ const pesanCollection = collection(db, 'undangan');
 const pesan = useCollection(pesanCollection);
 
 const komen = ref({})
-const code = ref(Math.floor(Math.random()*(9999-100+1)+100))
+const code = ref(Math.floor(Math.random() * (9999 - 100 + 1) + 100))
 
 // Function to send message
 const sendMessage = async () => {
@@ -34,32 +34,34 @@ const sendMessage = async () => {
 </script>
 
 <template>
-    <div class="flex flex-col gap-5 w-full">
-        <div
-            class="max-w-[400px] w-full relative mx-auto p-6 pt-12 bg-white rounded-xl border-2 border-dashed shadow-xl flex flex-col justify-center items-center">
-            <div class="bg-primary text-secondary  py-2 px-4 rounded-full -rotate-3 absolute -top-3">
-                <h2>Buku Tamu</h2>
-            </div>
-            <div class="w-full">
-                <form @submit.prevent="sendMessage" action="" class="flex flex-col gap-5 w-full">
-                    <div class="flex flex-col gap-2 w-full">
-                        <label for="nama">Nama</label>
-                        <input type="text" class="input" v-model="komen.nama">
-                    </div>
-                    <div class="flex flex-col gap-2 w-full">
-                        <label for="nama">Ucapan / Doa / Konfirmasi</label>
-                        <textarea name="" id="" class="input" rows="4" v-model="komen.pesan"></textarea>
-                    </div>
-                    <button
-                        class="py-3 px-6 rounded-full bg-primary text-light flex items-center gap-2 max-w-max hover:bg-opacity-80">
-                        Kirim
-                        <PlaneVue />
-                    </button>
-                </form>
+    <section id="komentar"
+        class="min-h-screen py-20 flex fle-col justify-center items-center px-6 bg-secondary bg-opacity-20">
+        <div class="flex flex-col gap-5 w-full">
+            <div
+                class="content max-w-[400px] w-full relative mx-auto p-6 pt-12 bg-white rounded-xl border-2 border-dashed shadow-xl flex flex-col justify-center items-center">
+                <div class="bg-primary text-secondary  py-2 px-4 rounded-full -rotate-3 absolute -top-3">
+                    <h2>Buku Tamu</h2>
+                </div>
+                <div class="w-full">
+                    <form @submit.prevent="sendMessage" action="" class="flex flex-col gap-5 w-full">
+                        <div class="flex flex-col gap-2 w-full">
+                            <label for="nama">Nama</label>
+                            <input type="text" class="input" v-model="komen.nama">
+                        </div>
+                        <div class="flex flex-col gap-2 w-full">
+                            <label for="nama">Ucapan / Doa / Konfirmasi</label>
+                            <textarea name="" id="" class="input" rows="4" v-model="komen.pesan"></textarea>
+                        </div>
+                        <button
+                            class="py-3 px-6 rounded-full bg-primary text-light flex items-center gap-2 max-w-max hover:bg-opacity-80">
+                            Kirim
+                            <PlaneVue />
+                        </button>
+                    </form>
 
+                </div>
             </div>
-        </div>
-<div  class="max-w-[400px] w-full relative mx-auto "> Komentar:</div>
+            <div class="max-w-[400px] w-full relative mx-auto "> Komentar:</div>
             <ul
                 class="max-w-[400px] w-full relative mx-auto p-6  bg-white rounded-xl border-2 border-dashed shadow-xl flex flex-col gap-5">
                 <li v-for="todo in pesan" :key="todo.id" class="bg-light rounded-xl p-4 flex flex-col gap-1">
@@ -67,7 +69,8 @@ const sendMessage = async () => {
                     <span>{{ todo.pesan }}</span>
                 </li>
             </ul>
-    </div>
+        </div>
+    </section>
 </template>
 <style scoped>
 .input {

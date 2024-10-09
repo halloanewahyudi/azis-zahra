@@ -22,3 +22,10 @@ body{
   font-style: normal;
   @apply tracking-wider;
 }
+
+#couple, #waktu,#turut-mengundang,#kondangan,#komentar{
+  background-image: url('/bg-transparent.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+}
