@@ -37,7 +37,7 @@ onMounted(() => {
                 <div>
                     <h4 class="yellowtail"> Zahra Nabillah</h4>
                     <p>Zahra</p>
-                    <p class="">Putra Pertama dari Pasangan</p>
+                    <p class="">Putra ke3 dari Pasangan</p>
                     <p>Darma Supriatn & Yuliana</p>
                 </div>
             </div>
